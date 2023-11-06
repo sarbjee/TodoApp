@@ -6,8 +6,9 @@ export default function ToDoForm() {
         <View style={styles.form}>
         <TextInput
             style={styles.input}
-            placeholder="Add as new task..."/>
-        <Button title="Add List" />
+            placeholder="Add new task..."
+        />
+        <Button title="Add" />
         </View>
     );
 }
@@ -20,15 +21,13 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         marginTop: 20,
     },
-    input:{
-        alignContent:'center',
-        fontStyle:'italic',
-        
-        borderColor:'black',
-        borderWidth:1,
-        borderRadius:5,
-
-
-    }
-
+    input: {
+        flex: 1,
+        borderWidth: 1,
+        borderColor: 'black',
+        paddingHorizontal: 30,
+        paddingVertical: 8,
+        marginRight: 15,
+        textDecorationColor:'black',
+    },
 })
