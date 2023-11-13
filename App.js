@@ -8,17 +8,23 @@ import ToDoList from './components/ToDoList';
  
 export default function App() {
  
-  const [tasks] = useState([
+  const [tasks, setTasks] = useState([
     'Do laundry',
     'Go to park',
     'Walk dog'
   ]);
+
+  const addTask = (taskText) => {
+    setTasks([...tasks, taskText]);
+  };
  
     return (
         <SafeAreaView>
             <ToDoList tasks={tasks} />
-            <ToDoForm />
+            <ToDoForm addTask={addTask} />
         </SafeAreaView>
     );
 }
+
+
 
