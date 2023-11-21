@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginHorizontal: 20,
-        marginTop: 20,
+        marginHorizontal: 25,
+        marginTop: 25,
     },
     input: {
         flex: 1,
