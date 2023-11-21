@@ -3,6 +3,8 @@ import { useState } from 'react';
 import {SafeAreaView, } from 'react-native';
 import ToDoForm from './components/ToDoForm';
 import ToDoList from './components/ToDoList';
+import HomeScreen from './screens/HomeScreen';
+import AboutScreen from './screens/AboutScreen';
 
  
  
@@ -17,12 +19,17 @@ export default function App() {
   const addTask = (taskText) => {
     setTasks([...tasks, taskText]);
   };
+
+  const Stack = createStackNavigator();
  
     return (
-        <SafeAreaView>
-            <ToDoList tasks={tasks} />
-            <ToDoForm addTask={addTask} />
-        </SafeAreaView>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="About" component={AboutScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+
     );
 }
 
